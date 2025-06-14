@@ -1,50 +1,68 @@
-GenCheck is a multi-modal content verification platform designed to detect whether a given text, image, or video is AI-generated or human-created. With the rapid rise of generative AI tools like ChatGPT, DALL·E, Midjourney, and deepfake generators, GenCheck aims to bring transparency and trust back to digital content.
+🧠 GenCheck – Multi-Modal AI-Generated Content Detection Platform
+GenCheck is a multi-modal content verification platform designed to detect whether a given text, image, or video is AI-generated or human-created. In an era of rapidly advancing generative AI tools like ChatGPT, DALL·E, Midjourney, and deepfake generators, GenCheck brings transparency and trust back to digital content.
 
-The tool targets academic institutions, media companies, hiring platforms, and individual users who need to verify the authenticity of the content they consume or receive.
+🚀 Project Goals
+Build a reliable AI/ML-based detection system for text, images, and videos
 
-🎯 Project Goals:
-Build a reliable detection system for text, image, and video content using AI/ML-based techniques.
+Provide confidence scores and interpretable insights into content authenticity
 
-Provide confidence scores and insights into why a piece of content is likely AI-generated.
+Support popular formats with a seamless user experience for uploading and analyzing content
 
-Support common file types and seamless user experience for uploading, analyzing, and receiving results.
+Use a modular architecture for easy extensibility (e.g., audio detection, metadata forensics)
 
-Offer a modular architecture for easy extension (e.g., audio detection, document metadata forensics).
+Promote awareness of generative AI through explainable results and educational insights
 
-Educate users on content manipulation and generative AI ethics via clear, explainable results.
+🧩 Key Functionalities
+🔠 Text Analysis Module
+Detects AI-generated text (e.g., GPT-2, GPT-3, GPT-4, ChatGPT)
 
-🧩 Key Functionalities:
-🔠 Text Analysis Module:
-Detects AI-generated content (e.g., ChatGPT, GPT-3/4)
+Outputs confidence scores and decision rationales (e.g., low burstiness, high predictability)
 
-Outputs confidence score and explains decision (e.g., low burstiness, predictable structure)
+Supports plain text, PDF, and DOCX files
 
-Supports plain text, PDFs, and DOCX
-
-🖼️ Image Analysis Module:
+🖼️ Image Analysis Module
 Identifies AI-generated images (e.g., DALL·E, Midjourney, Stable Diffusion)
 
-Highlights visual anomalies or forensic artifacts
+Highlights visual anomalies, forensic inconsistencies, and EXIF metadata absence
 
-Parses metadata (EXIF) for tampering or absence of camera signatures
+Detects known generation patterns or tampering artifacts
 
-🎞️ Video Analysis Module:
-Detects deepfake or AI-manipulated videos
+🎞️ Video Analysis Module
+Detects deepfakes or AI-manipulated videos
 
-Analyzes face landmarks, blinking frequency, lip-sync accuracy
+Uses facial landmark tracking, blinking analysis, and lip-sync accuracy
 
-Frame-by-frame anomaly detection
+Supports frame-by-frame anomaly detection
 
-📊 Report Dashboard:
-Unified result view with detection status (Human / AI-generated)
+📊 Unified Report Dashboard
+Clear detection result (Human / AI-generated)
 
-Confidence percentages and indicators
+Includes confidence scores, indicators, and analysis breakdowns
 
-History log for past analyses (per user/session)
+Maintains a history log of past analyses (user/session-based)
 
-🔐 Optional Features:
-User authentication (for saved histories)
+🔐 Optional Features
+User Authentication – Save analysis history per account
 
-API access for integration with third-party platforms
+API Access – Integrate GenCheck with third-party platforms
 
-Exportable detection reports (PDF format)
+Exportable Reports – Download detection results in PDF format
+
+💡 Target Users
+Academic Institutions – Detect plagiarism or AI-written assignments
+
+Media Companies – Verify the authenticity of images and footage
+
+Recruiters & Hiring Platforms – Validate originality of submitted documents
+
+Individuals – Anyone concerned about the credibility of content
+
+🛠️ Tech Stack (Planned / In-Progress)
+Module	Tech Stack Highlights
+Frontend	React, TailwindCSS, Chart.js
+Backend	Python (FastAPI / Flask), Node.js (optional for API gateway)
+ML Models	Transformers (HuggingFace), CNNs, Deepfake detection models
+Storage	AWS S3 / Firebase / MongoDB
+Auth & Sessions	Firebase Auth / JWT
+File Parsing	PyMuPDF, python-docx, ffmpeg
+Metadata Parsing	PIL, exifread, OpenCV
