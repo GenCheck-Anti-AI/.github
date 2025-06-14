@@ -1,68 +1,76 @@
-🧠 GenCheck – Multi-Modal AI-Generated Content Detection Platform
-GenCheck is a multi-modal content verification platform designed to detect whether a given text, image, or video is AI-generated or human-created. In an era of rapidly advancing generative AI tools like ChatGPT, DALL·E, Midjourney, and deepfake generators, GenCheck brings transparency and trust back to digital content.
+# 🧠 GenCheck – Multi-Modal AI-Generated Content Detection Platform
 
-🚀 Project Goals
-Build a reliable AI/ML-based detection system for text, images, and videos
+**GenCheck** is a multi-modal content verification platform that detects whether a given **text**, **image**, or **video** is **AI-generated** or **human-created**.
 
-Provide confidence scores and interpretable insights into content authenticity
+With the rise of tools like ChatGPT, DALL·E, Midjourney, and deepfake generators, GenCheck brings **transparency and trust** to digital content.
 
-Support popular formats with a seamless user experience for uploading and analyzing content
+---
 
-Use a modular architecture for easy extensibility (e.g., audio detection, metadata forensics)
+## 🎯 Project Goals
 
-Promote awareness of generative AI through explainable results and educational insights
+- ✅ Build an AI/ML-powered detection system for **text**, **images**, and **videos**
+- ✅ Provide **confidence scores** and **explainable insights**
+- ✅ Support multiple file types with a seamless **upload → analyze → result** pipeline
+- ✅ Enable **modular extensibility** (e.g., audio detection, metadata forensics)
+- ✅ Educate users on generative AI ethics and content manipulation
 
-🧩 Key Functionalities
-🔠 Text Analysis Module
-Detects AI-generated text (e.g., GPT-2, GPT-3, GPT-4, ChatGPT)
+---
 
-Outputs confidence scores and decision rationales (e.g., low burstiness, high predictability)
+## 🧩 Key Functionalities
 
-Supports plain text, PDF, and DOCX files
+### 🔠 Text Analysis Module
 
-🖼️ Image Analysis Module
-Identifies AI-generated images (e.g., DALL·E, Midjourney, Stable Diffusion)
+- Detects AI-generated content (e.g., ChatGPT, GPT-3, GPT-4)
+- Provides **confidence scores** with rationale (e.g., low burstiness, predictable structure)
+- Supports `.txt`, `.pdf`, and `.docx` file uploads
 
-Highlights visual anomalies, forensic inconsistencies, and EXIF metadata absence
+### 🖼️ Image Analysis Module
 
-Detects known generation patterns or tampering artifacts
+- Detects images from DALL·E, Midjourney, Stable Diffusion, etc.
+- Flags **forensic anomalies** (e.g., texture inconsistencies, symmetry artifacts)
+- Parses **EXIF metadata** to check for missing camera signatures
 
-🎞️ Video Analysis Module
-Detects deepfakes or AI-manipulated videos
+### 🎞️ Video Analysis Module
 
-Uses facial landmark tracking, blinking analysis, and lip-sync accuracy
+- Identifies **deepfakes** and AI-manipulated videos
+- Analyzes **face landmarks**, **blinking patterns**, **lip-sync accuracy**
+- Offers **frame-by-frame anomaly detection**
 
-Supports frame-by-frame anomaly detection
+### 📊 Unified Report Dashboard
 
-📊 Unified Report Dashboard
-Clear detection result (Human / AI-generated)
+- View detection results: ✅ Human / 🤖 AI-generated
+- Displays **confidence percentages** and visual cues
+- Maintains per-user or per-session **analysis history**
 
-Includes confidence scores, indicators, and analysis breakdowns
+---
 
-Maintains a history log of past analyses (user/session-based)
+## 🔐 Optional Features
 
-🔐 Optional Features
-User Authentication – Save analysis history per account
+- 🔑 **User Authentication** (history retention, user-specific logs)
+- 🔌 **API Access** for third-party platform integrations
+- 📤 **Exportable Reports** in `.pdf` format
 
-API Access – Integrate GenCheck with third-party platforms
+---
 
-Exportable Reports – Download detection results in PDF format
+## 🧑‍💻 Target Users
 
-💡 Target Users
-Academic Institutions – Detect plagiarism or AI-written assignments
+- 🎓 Academic Institutions – Prevent AI-written plagiarism
+- 📰 Media Companies – Validate source authenticity
+- 🧑‍💼 Recruiters – Verify originality of applicant content
+- 👤 Individuals – Ensure trust in consumed digital content
 
-Media Companies – Verify the authenticity of images and footage
+---
 
-Recruiters & Hiring Platforms – Validate originality of submitted documents
+## 🛠️ Tech Stack (Planned / In Progress)
 
-Individuals – Anyone concerned about the credibility of content
+| Area                | Tools / Technologies                              |
+|---------------------|----------------------------------------------------|
+| **Frontend**        | React, TailwindCSS, Chart.js                       |
+| **Backend**         | Python (FastAPI / Flask), Node.js (optional)       |
+| **ML Models**       | HuggingFace Transformers, CNNs, Deepfake models    |
+| **Storage**         | AWS S3, Firebase, MongoDB                          |
+| **Auth**            | Firebase Auth, JWT                                 |
+| **File Parsing**    | PyMuPDF, python-docx, ffmpeg                       |
+| **Metadata Parsing**| PIL, exifread, OpenCV                              |
 
-🛠️ Tech Stack (Planned / In-Progress)
-Module	Tech Stack Highlights
-Frontend	React, TailwindCSS, Chart.js
-Backend	Python (FastAPI / Flask), Node.js (optional for API gateway)
-ML Models	Transformers (HuggingFace), CNNs, Deepfake detection models
-Storage	AWS S3 / Firebase / MongoDB
-Auth & Sessions	Firebase Auth / JWT
-File Parsing	PyMuPDF, python-docx, ffmpeg
-Metadata Parsing	PIL, exifread, OpenCV
+---
